@@ -1,0 +1,25 @@
+{
+  "name": "tiktok-clone",
+  "private": true,
+  "packageManager": "yarn@4.13.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,css,md}\"",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
+    "db:push": "yarn workspace api db:push",
+    "db:generate": "yarn workspace api db:generate",
+    "db:seed": "yarn workspace api db:seed",
+    "db:studio": "yarn workspace api db:studio",
+    "db:reset": "yarn workspace api db:reset"
+  },
+  "devDependencies": {
+    "turbo": "^2.8.20"
+  }
+}

@@ -1,0 +1,31 @@
+# TikTok Clone - Antigravity Rules
+
+Khi làm việc trong project này, hãy tuân thủ nghiêm ngặt các quy tắc sau:
+
+## 1. Tech Stack & Environment
+- **Frontend**: Next.js 16 (App Router), TypeScript, Zustand.
+- **Backend**: NestJS (Modular Architecture).
+- **Database**: MongoDB với Prisma ORM.
+- **Package Manager**: Yarn v4 Berry (4.13.0).
+- **Styling**: Vanilla CSS / CSS Modules (TUYỆT ĐỐI KHÔNG dùng Tailwind trừ khi yêu cầu cụ thể).
+
+## 2. Database Rules (⚠️ CRITICAL)
+- **CẤM** tạo file migration (`prisma/migrations/`). MongoDB trong Prisma không dùng migration.
+- **CHỈ** dùng `yarn db:push` để cập nhật schema trực tiếp.
+- Các trường ID phải dùng `@db.ObjectId` và `@map("_id")`.
+
+## 3. Video Player implementation
+- **Intersection Observer**: Mọi video card trong feed phải dùng Intersection Observer để quản lý lifecycle.
+- **Playback**: Chỉ cho phép MỘT video phát tại một thời điểm (threshold >= 70% viewport).
+- **Memory**: Cleanup video elements khi unmount để tránh tràn bộ nhớ.
+
+## 4. Coding Standard
+- **File/Folder naming**: `kebab-case` (ví dụ: `video-player.tsx`).
+- **Export**: Dùng named exports, KHÔNG dùng `export default`.
+- **CSS**: Ưu tiên đặt tên Class theo `camelCase` (ví dụ: `styles.videoCard`).
+- **API**: Tuân thủ chuẩn RESTful, trả về định dạng `{ success: boolean, data: {}, meta: {} }`.
+
+## 5. Instructions for AI
+- Luôn kiểm tra `claude.md` để biết chi tiết về cấu trúc thư mục và API endpoints.
+- Đảm bảo tính năng Accessibility và Mobile First.
+- Luôn ưu tiên giao diện Dark Mode theo phong cách TikTok.
