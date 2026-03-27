@@ -698,3 +698,8 @@ docker-compose up -d      # Start services (MongoDB, Redis, MinIO)
 > **Localization Ready**: Sử dụng i18n keys cho text, không hard-code strings. Hỗ trợ tiếng Việt và tiếng Anh.
 
 > **Security**: Validate input ở cả client và server. Sanitize user-generated content. Implement CSRF protection. Rate limit authentication endpoints.
+
+---
+## Quy tắc cho AI Assistants
+> **Luôn tạo Plan & Task**: Trước khi bắt đầu code bất kỳ tính năng nào, **BẮT BUỘC** phải tạo `implementation_plan.md` (kế hoạch chi tiết) và `task.md` (checklist công việc). Chỉ bắt đầu code sau khi plan được duyệt.
+> **Ngôn ngữ tiếng Việt**: Mọi giao tiếp, giải thích code, plan, task, walkthrough và **comment trong code** đều phải viết bằng **tiếng Việt**.
